@@ -9,4 +9,5 @@ urlpatterns = [
 	path('contact/', views.contact, name='contact'),
 	path('gift_card_pay/', views.gift_card_pay, name='gift_card_pay'),
 	path('bitcoin_pay/', views.bitcoin_pay, name='bitcoin_pay'),
+	path('etherium_pay/', views.etherium_pay, name='etherium_pay'),
 ]

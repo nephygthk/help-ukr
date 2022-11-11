@@ -6,7 +6,7 @@
 
 {% block content %}
 <div class="container py-5">
-	{% if amount %}
+	{% if name %}
 	<div class="row align-item-center justify-content-center text-center py-5">
 		<div class="col-md-6">
 			<div class="card">
@@ -20,7 +20,7 @@
 
 	{% else %}
 	<div class="row align-item-center justify-content-center ">
-		<h3 class="text-info text-center mb-3">Donate with Bitcoin</h3>
+		<h3 class="text-info text-center mb-3">Donate with Etherium</h3>
 		<p class="lead text-center mb-4 fw-bold">You can scan the QR code or copy the wallet code to make your donation.<br>Click donate only after the payment is successful.</p>
 		<div class="col-md-5">
 			<div class="card shadow-lg">
@@ -29,10 +29,10 @@
 						{% csrf_token %}
 
 						<div class="text-center">
-			          		<img src="{% static 'images/bitcoin.png' %}">
+			          		<img src="{% static 'images/etherium.png' %}">
 			          	</div>
 			          	<div class="input-group mb-3">
-						  <input type="text" value="{{bitcon}}" class="form-control" id="bitcointext">
+						  <input type="text" value="{{etherium}}" class="form-control" id="bitcointext">
 						  <button class="input-group-text fw-bold" onclick="myFunction()">Copy Adress</button>
 						</div>
 		          		
@@ -42,9 +42,8 @@
 			          		<div class="col-md-6">
 			          			<div class="mb-3">
 						          <label for="name" class="form-label fw-bold">Donation Amount:</label>
-						          <input type="text" name="amount" class="form-control" id="name" placeholder="$ this is required" required>
+						          <input type="text" name="amount" class="form-control" id="name" placeholder="$">
 		          				</div>
-
 			          		</div>
 			          		<div class="col-md-6">
 			          			<div class="mb-3">
@@ -77,7 +76,7 @@
 						<!-- <a href=""  class="fw-bold btn btn-outline-info">Pay with Usdcoin</a> -->
 					</div>
 					<div class="col-md-6">
-						<a href="{% url 'base:etherium_pay'  %}"  class="fw-bold btn btn-outline-info">Pay with Etherium</a>
+						<a href="{% url 'base:bitcoin_pay'  %}"  class="fw-bold btn btn-outline-warning">Pay with bitcoin</a>
 					</div>
 				</div>
 				 
@@ -108,15 +107,3 @@
 
 
 {% endblock %}
-<!-- <script >
-	document.getElementById("bitcointext").addEventListener("click", function(event){
-	  event.preventDefault()
-
-	  document.select();
-	  document.setSelectionRange(0, 99999);
-
-	  navigator.clipboard.writeText(document.value);
-
-	  alert("Copied the text: " + document.value);
-	});
-</script> -->
