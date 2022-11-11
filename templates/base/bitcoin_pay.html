@@ -1,0 +1,90 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block tittle %}Donate With Gift Card{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+	{% if name %}
+	<div class="row align-item-center justify-content-center text-center py-5">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-body">
+					<h5>Thank you <strong class="text-info">{{name}}</strong > for your <strong class="text-info">${{amount}}</strong> donation. The children of eastern Ukraine are grateful to you.<br> A payment receipt has been sent to your email <strong class="text-warning">({{email}})</strong>. God bless you!</h5>
+					<a href="/" class="btn btn-outline-primary fw-bold btn-sm w-50 my-2">Home Page</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% else %}
+	<div class="row align-item-center justify-content-center ">
+		<h3 class="text-info text-center mb-3">Donate with Bitcoin or Etherium</h3>
+		<p class="lead text-center mb-4 fw-bold">You can scan the QR code or copy the wallet code to make your donation.<br>Click donate only after the payment is successful.</p>
+		<div class="col-md-5">
+			<div class="card shadow-lg">
+				<div class="card-body">
+					<form method="POST" action="" enctype="multipart/form-data">
+						{% csrf_token %}
+						<div class="mb-3">
+				          <label for="name" class="form-label fw-bold">Your Name:</label>
+				          <input type="text" name="name" class="form-control" id="name" placeholder="Jon doe">
+				          <div id="emailHelp" class="form-text">Check anonymous donor if you don't want to share your information</div>
+		          		</div>
+		          		<div class="mb-3">
+				            <label for="email" class="form-label fw-bold">Email:</label>
+				            <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
+			          	</div>
+			          	<div class="form-check mb-3">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+						  <label class="form-check-label fw-bold text-success" for="flexCheckChecked">
+						    Anonymous Donor
+						  </label>
+						</div>
+
+	          			<div class="mb-3">
+				          <label for="name" class="form-label fw-bold">Donation Amount:</label>
+				          <input type="text" name="amount" class="form-control" id="name" placeholder="$">
+		          		</div>
+
+		          		
+		          		
+			          	<hr>
+			          	<hr>
+			          	<br>
+			          	<div class="input-group mb-3">
+						  <input type="text" value="{{bitcon}}" class="form-control" id="bitcointext">
+						  <button class="input-group-text fw-bold" onclick="myFunction()">Copy</button>
+						</div>
+		          		<div class="modal-footer">
+				          <input type="submit" value="Donate" class="btn btn-primary fw-bold w-100"></input>
+				        </div>
+					</form>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	{% endif %}
+</div>
+
+
+<script>
+	function myFunction() {
+	  // Get the text field
+	  var copyText = document.getElementById("bitcointext");
+
+	  // Select the text field
+	  copyText.select();
+	  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+	   // Copy the text inside the text field
+	  navigator.clipboard.writeText(copyText.value);
+
+	  // Alert the copied text
+	  alert("Copied the text: " + copyText.value);
+	}
+</script>
+
+{% endblock %}

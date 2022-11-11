@@ -1,0 +1,47 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block tittle %}About US{% endblock %}
+
+
+{% block content %}
+<div class="container py-5">
+	<div class="row">
+		<div class="col-md-7">
+			<h2 class="text-primary">Who We are</h2>
+			<p class="lead">Ukraine needs you is a non-profit organizatiom formed by a group of citizens from eastern part of Ukraine to seek for outside support for our people who are suffering due to the war between Russia and UKraine. There is nothing we can do without your help. Hunger, bad water and cold kills more Ukrainian children than shelling and shooting.We often here about humanitarian aids from different countries to our government but nothing gets to us, The money and aid are being stolen by the rich and powerful. Which is why we decided to create a non-profit organization where good people all around the world can send help directly to eastern Ukranian citizens who are suffering the most in this war.</p>
+		</div>
+		<div class="col-md-5">
+			<img src="{% static 'images/twop.png' %}" class="img-fluid d-none d-sm-block w-100" >
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-5">
+			<img src="{% static 'images/mancarry.png' %}" class="img-fluid d-none d-sm-block w-100" >
+		</div>
+		<div class="col-md-7">
+			<h2 class="text-primary">Our Mission</h2>
+			<p class="lead">Our purpose is to directly serve individuals and families who are suffering the most in the communities affected by the war. Providing food, medical attention, shelter and good water for our people whose lives has been devastated because of war. We are dedicated to improving quality of life of suffering children and youth by providing basic necessities, critical benefits and services.
+
+			We were founded out of a need to raise awareness for voices not heard and people who have been abandoned by both Ukranian and Russian officials. We have continued to make a difference with the help of our donors and volunteers that make our mission possible and we hope to continue until the wicked war is over. 
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="container text-center py-5">
+	<div class="row align-item-center justify-content-center ">
+		<div class="col-md-7">
+			<h2 class="text-primary">Hope</h2>
+			<p class="lead">We have a responsibility to our community and our donors to work hard to ensure long-term sustainability of the organization. Your funds will be directed to help provide the basic neccesities for the suffering people of eastern Ukraine. 
+			</p>
+		</div>
+	</div>
+</div>
+{% endblock %}
+

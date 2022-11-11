@@ -1,0 +1,52 @@
+
+
+
+.navbar{
+	background:#005bbc;
+	color: #fff;
+}
+
+.navbar-brand{
+	color: #fff;
+	font-size: 30px;
+}
+
+.nav-link{
+	font-size: 17px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.nav-link:hover, 
+.navbar-brand:hover{
+	color: purple;
+}
+
+
+/*hero*/
+.hero{
+	background: linear-gradient(#005bbc, #ffd600 );
+	color: #fff;
+}
+
+.hero h6{
+	font-size: 25px;
+}
+
+.hero h2{
+	font-size: 35px;
+}
+
+.hero p{
+	font-size: 16px;
+}
+
+
+.alerty{
+	background:linear-gradient(rgba(9, 23, 206, 0.7), rgba(206, 240, 13, 0.5)),  url("/static/images/uk11.jpg") no-repeat center;
+}
+
+.footer{
+	background: linear-gradient( #ffd600, #005bbc );
+	color: #fff;
+}

@@ -1,0 +1,144 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<section class="hero">
+	<div class="container  py-5">
+		<div class="row">
+			<div class="col-md-6 py-4">
+				<h6>We The People of Ukraine, Especially the people living in eastern part of Ukraine, urgently needs your help and support.</h6>
+				<h2>Ordinary Citizens are The Only Ones That suffer from War</h2>
+				<p class="lead">Please we beg you to come together and do as little as you can for the citizen who are stuck in the war ravaging eastern part of Ukraine. We are being used as pawn by both Ukranian and Russian Goverment. We have been abandoned by all the charity organizations. We are becoming more hopeless everyday.
+				Please don't forget that ten dollars can feed more than 8 children for one week here. Please don't abandon us.</p>
+
+				<button class="btn btn-primary fw-bold w-100" data-bs-toggle="modal" data-bs-target="#donateModal">Donate Now</button>
+			</div>
+			<div class="col-md-6">
+				<img src="{% static 'images/mancarry.png' %}" class="img-fluid d-none d-sm-block w-100" >
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="container py-5">
+		<div class="bg-primary">
+			<div>
+				<h4 class="p-3 text-center text-white">Donate now to save us. Remember as little as $10 can go a long way in feeding little kids here.</h4>
+			</div>
+			
+		</div>
+		<div class="owl-carousel owl-theme">
+	    	<div class="item"><img src="{% static 'images/uk1.jpg' %}"></div>
+	    	<div class="item"><img src="{% static 'images/uk2.jpg' %}"></div>
+	    	<div class="item"><img src="{% static 'images/uk4.jpg' %}"></div>
+	    	<div class="item"><img src="{% static 'images/uk66.jpg' %}"></div>
+	    	<div class="item"><img src="{% static 'images/uk7.jpg' %}"></div>
+	    	<div class="item"><img src="{% static 'images/uk8.jpeg' %}"></div>
+	    	<div class="item"><img src="{% static 'images/uk10.jpg' %}"></div>
+	    	<div class="item"><img src="{% static 'images/ukchild.jpeg' %}"></div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="container py-5">
+		<div class="row">
+			<div class="col-md-6 mb-4 mb-sm-0">
+				<h2 class="py-2">The horror we live through everyday. we beg you to save our children by donating any amount you can.</h2>
+				<p class="lead"> More than 500 children have been killed or injured since Russia launched its invasion of Ukraine few months ago, majority of the children killed are from eastern part of Ukraine, We are being shelled everyday by both Ukranian and Russian military. Our lives are being used as a political pawn by the rich and powerful, who are benefiting from this war. There is no water, no heating, and no electricity, and people are on the verge of starvation. We have no medicine and no support from anybody. We often here about humanitarian support from different countries to our government but nothing gets to us, The money and aid are being stolen by the rich and powerful.
+				Young children here are 20 times more likely to die from diarrhoeal diseases linked to unsafe water than from direct violence, as a result of war.</p>
+				<button class="btn btn-primary fw-bold w-50" data-bs-toggle="modal" data-bs-target="#donateModal">Donate Now</button>
+			</div>
+			<div class="col-md-6">
+				<img src="{%  static 'images/uk9.jpg' %}" class="img-fluid">
+			</div>
+		</div>
+	</div> 
+</section>
+
+
+
+<section class="alerty">
+	<div class="container py-5">
+
+		<h1 class="text-center text-light">Please remember that as little as 10 dollars can feed three little kids for more than one week here. Don't let the kids freeze to death. they are counting on you.</h1>
+		<center>
+			<button class="btn btn-primary fw-bold w-50" data-bs-toggle="modal" data-bs-target="#donateModal">Donate Now</button>
+		</center>
+		
+		
+	</div> 
+</section>
+
+
+
+<section class="">
+	<div class="container py-5">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body">
+						<div class="bg-warning">
+							<h3 class="p-3 text-white text-center">Food & Water Crisis</h3>
+						</div>
+						<p class="p-2">Young children here are 20 times more likely to die from diarrhoeal diseases linked to unsafe water and unhealthy food than from direct violence, as a result of war.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body">
+						<div class="bg-info">
+							<h3 class="p-3 text-white text-center">Refugee Crisis</h3>
+						</div>
+						<p class="p-2">Winter is comming and a lot of people here in Ukraine doesn't have a safe place to stay. no heating and unfortunately if nothing is done, a lot of people will freeze to death.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body">
+						<div class="bg-success">
+							<h3 class="p-3 text-white text-center">Escape Route for Safety</h3>
+						</div>
+						<p class="p-2">Due to the risk of freezing to death, a lot of people here wants to escape to a safer place, but to do that they need to bribe the russian soldiers to give them a passage. your donation will go a long way.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
+</section>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-info" id="donateModalLabel">How Do you want to Donate?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      	Please Note: Due to the war, banks are no longer functioning in the eastern part of Ukraine.
+      	Bitcoin and Gift cards are the only means for us to get donations.
+        Choose one of the two options to proceed.
+      </div>
+      <div class="modal-footer">
+        <a href="{% url 'base:bitcoin_pay' %}" class="btn btn-primary fw-bold">Bitcoin</a>
+        <a href="{% url 'base:gift_card_pay' %}" class="btn btn-primary fw-bold">Gift Card</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
